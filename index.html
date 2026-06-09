@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment QR Selector</title>
+  <meta name="description" content="Responsive payment QR display page for Easypaisa, Bank Alfalah, and JazzCash." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="payment-card" aria-labelledby="payment-heading">
+      <p class="eyebrow">Secure Payment Selection</p>
+      <h1 id="payment-heading">Choose Payment Method</h1>
+      <p class="subtitle">Select a payment option to preview its QR code instantly.</p>
+
+      <div class="button-grid" role="tablist" aria-label="Payment methods">
+        <button class="pay-btn active" type="button" data-method="easypaisa" aria-pressed="true">💸 Easypaisa</button>
+        <button class="pay-btn" type="button" data-method="alfalah" aria-pressed="false">🏦 Bank Alfalah</button>
+        <button class="pay-btn" type="button" data-method="jazzcash" aria-pressed="false">📱 JazzCash</button>
+      </div>
+
+      <div class="qr-stage" aria-live="polite">
+        <article class="qr-card active" data-qr="easypaisa">
+          <p class="qr-label">Easypaisa QR</p>
+          <img src="images/easypaisa.png" alt="Easypaisa QR code" />
+          <div class="verification-box">
+            <h2>Verification Details</h2>
+            <div class="detail-row"><span>Account / Wallet ID</span><strong>PK57TMFB0000000075805975</strong></div>
+            <div class="detail-row"><span>Mobile Number</span><strong>03197291519</strong></div>
+            <div class="detail-row"><span>Provider</span><strong>Easypaisa</strong></div>
+            <div class="detail-row"><span>Account Holder</span><strong>Ali Artasam Zaidi</strong></div>
+            <button class="copy-btn" type="button" data-copy="PK57TMFB0000000075805975">Copy ID</button>
+          </div>
+        </article>
+
+        <article class="qr-card" data-qr="alfalah">
+          <p class="qr-label">Bank Alfalah QR</p>
+          <img src="images/alfalah.png" alt="Bank Alfalah QR code" />
+          <div class="verification-box">
+            <h2>Verification Details</h2>
+            <div class="detail-row"><span>IBAN / Account ID</span><strong>PK17ABPA0010163930500016</strong></div>
+            <div class="detail-row"><span>Account Number</span><strong>00840010163930500016</strong></div>
+            <div class="detail-row"><span>Bank</span><strong>Allied Bank Limited</strong></div>
+            <div class="detail-row"><span>Account Holder</span><strong>Ali Irtasam Zaidi</strong></div>
+            <button class="copy-btn" type="button" data-copy="PK17ABPA0010163930500016">Copy IBAN</button>
+          </div>
+        </article>
+
+        <article class="qr-card" data-qr="jazzcash">
+          <p class="qr-label">JazzCash QR</p>
+          <img src="images/JazzCash.jpeg" alt="JazzCash QR code" />
+          <div class="verification-box">
+            <h2>Verification Details</h2>
+            <div class="detail-row"><span>Account / Wallet ID</span><strong>PK62JCMA2702923066232180</strong></div>
+            <div class="detail-row"><span>Mobile Number</span><strong>03066232180</strong></div>
+            <div class="detail-row"><span>Provider</span><strong>JazzCash</strong></div>
+            <div class="detail-row"><span>Account Holder</span><strong>Ali Irtasam Zaidi</strong></div>
+            <button class="copy-btn" type="button" data-copy="PK62JCMA2702923066232180">Copy ID</button>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer-note">Secure Payment Selection</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
